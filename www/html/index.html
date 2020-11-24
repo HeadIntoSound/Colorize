@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="Colorize!">
+  <head>
+    <title>Colorize!</title>
+    <link rel="shortcut icon" href="imgs/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <script data-requiere="angular.js@*" src="node_modules/angular/angular.js"></script>
+    <script src="script.js"></script>
+    <script src="node_modules/hammerjs/hammer.js"></script>
+    <script src="node_modules/angular-hammer/angular.hammer.js"></script>
+    <script src="https://cdn.rawgit.com/zenorocha/clipboard.js/master/dist/clipboard.min.js"></script>
+    <script src="node_modules/ngclipboard/dist/ngclipboard.min.js"></script>
+  </head>
+  <body ng-controller="MainController" ng-style="style(color)">
+    <section class="s1">
+      <div class="d1">
+        <a class="link" href="index.html"><span class="logo"></span></a>
+        <span class="slogan"></span>
+      </div>
+      <div class="response">
+        <form class="forma" ng-submit="change()">
+          <input class="in" type="text" ng-model="name" ng-style="blank()">
+          <span class="btn2" ngclipboard data-clipboard-target=#co ng-style="style(complement)">Copy</span>
+          <br>
+          <input id="co" type="text" value="0" ng-value=color>
+          <br>
+          <input class="btn" type="submit" value="Colorize!" hm-press="change()" ng-style="style(complement)">
+        </form>
+      </div>
+    </section>
+    <footer class="pie" ng-style="style(complement)">
+      <a class="text">2020 - &reg; Lucas Rodas</a> <span class="info"> <a href="info.html">INFO</a> </span>
+    </footer>
+  </body>
+</html>

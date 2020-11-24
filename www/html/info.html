@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="Colorize!">
+  <head>
+    <title>Colorize!</title>
+    <link rel="stylesheet" href="style.css">
+    <script data-requiere="angular.js@*" src="node_modules/angular/angular.js"></script>
+    <script src="script.js"></script>
+    <script src="node_modules/hammerjs/hammer.js"></script>
+    <script src="node_modules/angular-hammer/angular.hammer.js"></script>
+  </head>
+  <body ng-controller="MainController" ng-style="style(color)">
+    <section class="s2">
+      <div class="d1">
+        <a class="link" href="index.html"><span class="logo"></span></a>
+        <span class="slogan"></span>
+      </div>
+      <div class="d2">
+        <p class="exp">I was playing with Python to gain some experience when I suddenly got an idea. <br>
+          Using the hex() built in function, you can get an hexadecimal for every number. So using the, also built in
+          function, ord() I get the number for every letter in a string. Then I pass it through the hex to obtain the hexadecimal value
+          of said string. <br>
+          To keep it short, colors are coded using 6 hexadecimal digits. So traslating letters into hexadecimal digits it's an easy task
+          but then you realize that every letter is equal to 2 hexadecimal digits, that means only the three initial letters of a world
+          is equal to a full color. To get my way around it, I developed an algorithm that uses every character in a string to make a color.
+          By adding the following letters' values to the initial three and keeping it in a 6 digit range. <br><br>
+          TL;DR: I made an algorithm that takes a world and turns it into a color by doing math. <br><br>
+          <a class="txt" href="#">Lucas Rodas </a></p>
+      </div>
+    </section>
+    <footer class="pie" ng-style="style(complement)">
+      <a class="text">2020 - © Lucas Rodas</a></span>
+    </footer>
+  </body>
+</html>
